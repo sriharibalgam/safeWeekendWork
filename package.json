@@ -1,0 +1,15 @@
+{
+  "name": "safe-weekend",
+  "version": "1.0.0",
+  "description": "Work Smart and stay safe",
+  "main": "server.js",
+  "scripts": {
+    "start": "http-server -a 10.64.103.151 -p 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SrihariBalgam",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
