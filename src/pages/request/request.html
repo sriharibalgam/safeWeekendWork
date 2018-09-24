@@ -1,0 +1,88 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Dash Board</ion-title>
+        <ion-buttons end style="order:5;">
+            <ion-row class="reservations-text" style="font-size: 20px;">{{userData.firstName}}</ion-row>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+
+    <div *ngIf="requstFlag">
+        <ion-row>
+            <ion-col col-4>
+                <button ion-button style="background-color:#A32020;" (click)="navigateToRequst()">Raise Request</button>
+            </ion-col>
+            <ion-col col-4>
+                <button ion-button style="background-color:#A32020;" (click)="navigateToEmergency()">Panic</button>
+            </ion-col>
+            <ion-col col-4>
+                <button ion-button style="background-color:#A32020;" (click)="navigateToViewRequst()">View Request</button>
+            </ion-col>
+        </ion-row>
+
+        <div *ngIf="requstFlag">
+
+            <ion-item>
+                <ion-label style="color: black;"> select Date</ion-label>
+                <ion-datetime [(ngModel)]='req_date' displayFormat="MM/DD/YYYY"></ion-datetime>
+            </ion-item>
+            <ion-row>
+                <ion-col col-4>
+                    <ion-label fixed style="color: black;margin-left: 15px;font-size: 15px;">Cubicle Id</ion-label>
+                </ion-col>
+                <ion-col col-8>
+                    <ion-input [(ngModel)]='cubicle_info' style="border: 1px solid gray;" placeholder="Enter Cubicle Info..."></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>
+                    <ion-label fixed style="color: black;margin-left: 15px;font-size: 15px;">Approver Id</ion-label>
+                </ion-col>
+                <ion-col col-8>
+                    <ion-input [(ngModel)]='approver_id' style="border: 1px solid gray;" placeholder="Enter Approver Id..."></ion-input>
+                </ion-col>
+            </ion-row>
+
+            <button ion-button block style="background-color:#A32020;margin-top: 20%;" (click)="saveWeekendRequest()">SUBMIT</button>
+
+            <form (ngSubmit)="login()" #registerForm="ngForm">
+                <ion-row>
+                    <ion-col>
+                        <ion-list inset>
+                            <ion-item>
+                                <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email"
+                                    required></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password"
+                                    required></ion-input>
+                            </ion-item>
+
+                        </ion-list>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+                </ion-row>
+
+            </form>
+        </div>
+
+        <div *ngIf="viewRequstFlag">
+            <ion-list *ngFor="let req of reqList" style="margin-top: 20px;">
+                <!-- <ion-item-sliding #reqItem> -->
+                <ion-item style="box-shadow: 5px 4px 9px #888888;margin: 19px;">
+                    {{req.date}}
+                </ion-item>
+                <!-- <ion-item-options side="left">
+                <button ion-button color="danger">Delete</button>
+              </ion-item-options>  -->
+                <!-- </ion-item-sliding> -->
+            </ion-list>
+        </div>
+    </div>
+</ion-content>

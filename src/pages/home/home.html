@@ -1,0 +1,25 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed style="color: black;">Username</ion-label>
+      <ion-input type="text" value="" [(ngModel)]='username' placeholder="Enter User name here..."></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed style="color: black;">Password</ion-label>
+      <ion-input type="password"  [(ngModel)]='passWord' placeholder="Enter PassWord here..."></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  <button ion-button style="margin-left: 20%;
+  width: 60%;background-color: #A32020;" (click)="navigateTo()">Submit</button>
+</ion-content>

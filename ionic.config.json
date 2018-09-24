@@ -1,0 +1,7 @@
+{
+  "name": "weekEndApproval",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

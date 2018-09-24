@@ -1,0 +1,21 @@
+ {
+    
+    "employeeList": [
+        {
+            "employeeName": "praveen",
+            "Password": "praveen"
+           
+        },
+        {
+            "employeeName": "vennela",
+            "Password": "vennela"
+           
+        },
+        {
+            "employeeName": "srihari",
+            "Password": "srihari"
+           
+        }
+       
+    ]
+}

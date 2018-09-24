@@ -1,15 +1,47 @@
 {
-  "name": "safe-weekend",
-  "version": "1.0.0",
-  "description": "Work Smart and stay safe",
-  "main": "server.js",
+  "name": "weekEndApproval",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
   "scripts": {
-    "start": "http-server -a 10.64.103.151 -p 8000",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
   },
-  "author": "SrihariBalgam",
-  "license": "ISC",
+  "dependencies": {
+    "@agm/core": "^1.0.0-beta.3",
+    "@angular/common": "5.0.0",
+    "@angular/compiler": "5.0.0",
+    "@angular/compiler-cli": "5.0.0",
+    "@angular/core": "5.0.0",
+    "@angular/forms": "5.0.0",
+    "@angular/http": "5.0.0",
+    "@angular/platform-browser": "5.0.0",
+    "@angular/platform-browser-dynamic": "5.0.0",
+    "@ionic-native/core": "4.3.2",
+    "@ionic-native/geolocation": "^4.14.0",
+    "@ionic-native/push": "^4.14.0",
+    "@ionic-native/splash-screen": "4.3.2",
+    "@ionic-native/status-bar": "4.3.2",
+    "@ionic/storage": "2.1.3",
+    "ionic-angular": "3.9.2",
+    "ionicons": "3.0.0",
+    "phonegap-plugin-push": "^2.2.3",
+    "rxjs": "5.5.2",
+    "sw-toolbox": "3.6.0",
+    "zone.js": "0.8.18"
+  },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "@ionic/app-scripts": "3.1.0",
+    "typescript": "2.4.2"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "phonegap-plugin-push": {}
+    }
   }
 }
